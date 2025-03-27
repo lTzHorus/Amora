@@ -2,92 +2,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amora Buffet | Experiências Gastronômicas Exclusivas</title>
-    <meta name="description" content="Buffet Amora - Transformando momentos em memórias deliciosas com serviços de buffet sofisticados para casamentos, eventos corporativos e festas infantis.">
+    <title>Amora Buffet - Eventos Especiais</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script type="importmap">
         {
             "imports": {
-                "gsap": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+                "swiper": "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js"
             }
         }
     </script>
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 <body>
     <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <h1>Amora</h1>
-                    <span>Buffet & Eventos</span>
-                </div>
-                <ul>
-                    <li><a href="index.html#home">Início</a></li>
-                    <li><a href="Sobre.html">Sobre nós</a></li>
-                    <li><a href="index.html#cardapios">Cardápios</a></li>
-                    <li><a href="index.html#servicos">Serviços</a></li>
-                    <li><a href="index.html#contato">Contato</a></li>
-                </ul>
-            </nav>
+        <div class="logo-container">
+            <svg class="logo" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30,10 C45,10 55,20 55,35 C55,50 45,60 30,60 C15,60 5,50 5,35 C5,20 15,10 30,10" fill="#8E2DE2"/>
+                <path d="M30,15 C40,15 50,25 50,35 C50,45 40,55 30,55 C20,55 10,45 10,35 C10,25 20,15 30,15" fill="#4A00E0"/>
+                <text x="70" y="40" font-family="'Pacifico', cursive" font-size="24" fill="#333">Amora</text>
+                <text x="70" y="55" font-family="'Arial', sans-serif" font-size="12" fill="#666">Buffet</text>
+            </svg>
         </div>
+        <nav>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cardapios">Cardápios</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h2>Vamos realizar seu sonho</h2>
-                <p>Transformando momentos especiais em memórias deliciosas com atendimento personalizado e cardápios exclusivos</p>
-                <a href="#cardapios" class="cta-button">Descubra Nossos Cardápios</a>
-                <a href="acasa.html" class="cta-button">Acasa de Babette</a>
-            </div>
-        </section>
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Tornamos seu evento inesquecível</h1>
+            <p>Buffet especializado em eventos sociais e corporativos</p>
+            <a href="#contato" class="btn primary">Solicite um orçamento</a>
+        </div>
+    </section>
 
-        <section id="cardapios" class="cardapios">
-            <div class="container">
-                <h2>Cardápios Exclusivos</h2>
-                <div class="cardapio-grid">
-                    <div class="cardapio-item">
-                        <h3>Buffet Casamento</h3>
-                        <div class="cardapio-details">
-                            <p>Um menu sofisticado e personalizado para tornar seu dia ainda mais especial. Opções requintadas que impressionam seus convidados.</p>
-                            <a href="#" class="ver-detalhes">Ver Detalhes</a>
+    <section id="sobre" class="about">
+        <div class="container">
+            <h3>Amora e a Casa de Babette</h3>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>O Amora Buffet nasceu da paixão pela gastronomia e pelo desejo de tornar cada evento único e especial.</p>
+                    <p>Nossa equipe de chefs altamente qualificados elabora cardápios exclusivos, utilizando ingredientes frescos e de primeira qualidade, garantindo uma experiência gastronômica memorável para você e seus convidados.</p>
+                    <p>A Casa de Babette nasceu da soma de dois sonhos, primeiro é criar um espaço para eventos onde a arte em conjunto com a beleza trouxesse ao visitante memórias com toques artísticos e cenográficos.</p>
+                    <p>O segundo é oferecer excelência na produção de eventos, proporcionando leveza nas relações durante esse processo.</p>
+                    
+                </div>
+            </div>
+            <!-- Container para as 3 imagens lado a lado -->
+            <div class="about-images">
+                <img src="A casa_files/acasa.jpg" alt="Equipe do Amora Buffet" class="team-photo">
+                <img src="A casa_files/casadebabe.jpg" alt="Cozinha do Buffet" class="team-photo">
+                <img src="A casa_files/casamento1.jpg" alt="Evento realizado" class="team-photo">
+            </div>
+        </div>
+    </section>
+
+    <section id="cardapios" class="menus">
+        <div class="container">
+            <h2>Nossos Cardápios</h2>
+            <div class="menu-tabs">
+                <div class="menu-nav">
+                    <button class="menu-tab active" data-target="casamentos">Casamentos</button>
+                    <button class="menu-tab" data-target="aniversarios">Aniversários</button>
+                    <button class="menu-tab" data-target="corporativo">Corporativo</button>
+                    <button class="menu-tab" data-target="festas">Festas</button>
+                </div>
+                
+                <div class="menu-content">
+                    <div class="menu-item active" id="casamentos">
+                        <h3>Cardápio para Casamentos</h3>
+                        <div class="menu-details">
+                            <div class="menu-category">
+                                <h4>Entradas</h4>
+                                <ul>
+                                    <li>Canapés de salmão com cream cheese</li>
+                                    <li>Bruschetta de tomate e manjericão</li>
+                                    <li>Mini quiche de alho-poró</li>
+                                    <li>Espetinhos de queijo coalho com mel</li>
+                                </ul>
+                            </div>
+                            <div class="menu-category">
+                                <h4>Pratos Principais</h4>
+                                <ul>
+                                    <li>Medalhão de filé mignon ao molho de vinho tinto</li>
+                                    <li>Risoto de camarão com limão siciliano</li>
+                                    <li>Salmão grelhado com crosta de ervas</li>
+                                </ul>
+                            </div>
+                            <div class="menu-category">
+                                <h4>Sobremesas</h4>
+                                <ul>
+                                    <li>Mini tortinhas de frutas vermelhas</li>
+                                    <li>Mousse de chocolate belga</li>
+                                    <li>Petit Gateau com sorvete de creme</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="cardapio-item">
-                        <h3>Buffet Corporativo</h3>
-                        <div class="cardapio-details">
-                            <p>Soluções gastronômicas empresariais que elevam o nível dos seus eventos. Praticidade e elegância para suas reuniões e comemorações.</p>
-                            <a href="#" class="ver-detalhes">Ver Detalhes</a>
+                    
+                    <div class="menu-item" id="aniversarios">
+                        <h3>Cardápio para Aniversários</h3>
+                        <div class="menu-details">
+                            <div class="menu-category">
+                                <h4>Finger Foods</h4>
+                                <ul>
+                                    <li>Mini hambúrgueres gourmet</li>
+                                    <li>Bolinhos de bacalhau</li>
+                                    <li>Coxinhas de frango com catupiry</li>
+                                    <li>Dadinhos de tapioca com geleia de pimenta</li>
+                                </ul>
+                            </div>
+                            <div class="menu-category">
+                                <h4>Pratos Quentes</h4>
+                                <ul>
+                                    <li>Escondidinho de carne seca</li>
+                                    <li>Rondelli de presunto e queijo</li>
+                                    <li>Arroz de pato</li>
+                                </ul>
+                            </div>
+                            <div class="menu-category">
+                                <h4>Doces</h4>
+                                <ul>
+                                    <li>Brigadeiros gourmet</li>
+                                    <li>Macarons variados</li>
+                                    <li>Cupcakes decorados</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="cardapio-item">
-                        <h3>Buffet Infantil</h3>
-                        <div class="cardapio-details">
-                            <p>Diversão e sabor para as crianças em um cardápio colorido e nutritivo. Criações que encantam os pequenos e tranquilizam os pais.</p>
-                            <a href="#" class="ver-detalhes">Ver Detalhes</a>
+                    
+                    <div class="menu-item" id="corporativo">
+                        <h3>Cardápio Corporativo</h3>
+                        <div class="menu-details">
+                            <div class="menu-category">
+                                <h4>Coffee Break</h4>
+                                <ul>
+                                    <li>Mini sanduíches naturais</li>
+                                    <li>Pães de queijo</li>
+                                    <li>Wraps variados</li>
+                                    <li>Folhados de frango</li>
+                                </ul>
+                            </div>
+                            <div class="menu-category">
+                                <h4>Almoço Executivo</h4>
+                                <ul>
+                                    <li>Salada Caesar com frango grelhado</li>
+                                    <li>Penne ao molho pesto com tomates secos</li>
+                                    <li>Filé de frango ao molho de mostarda</li>
+                                </ul>
+                            </div>
+                            <div class="menu-category">
+                                <h4>Bebidas</h4>
+                                <ul>
+                                    <li>Sucos naturais</li>
+                                    <li>Água aromatizada</li>
+                                    <li>Café espresso</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item" id="festas">
+                        <h3>Cardápio para Festas Diversas</h3>
+                        <div class="menu-details">
+                            <div class="menu-category">
+                                <h4>Petiscos</h4>
+                                <ul>
+                                    <li>Isca de peixe com molho tártaro</li>
+                                    <li>Camarão empanado</li>
+                                    <li>Pastéis de carne</li>
+                                    <li>Batata frita com cheddar e bacon</li>
+                                </ul>
+                            </div>
+                            <div class="menu-category">
+                                <h4>Buffet Completo</h4>
+                                <ul>
+                                    <li>Feijoada completa</li>
+                                    <li>Churrasco com carnes nobres</li>
+                                    <li>Paella valenciana</li>
+                                </ul>
+                            </div>
+                            <div class="menu-category">
+                                <h4>Sobremesas</h4>
+                                <ul>
+                                    <li>Pudim de leite</li>
+                                    <li>Torta de limão</li>
+                                    <li>Pavê de chocolate</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <h2>Galeria de Eventos</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!-- Placeholders para as imagens da galeria -->
+                    <div class="swiper-slide">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="300" fill="#f5f5f5"/>
+                                <text x="200" y="150" font-family="Arial" font-size="20" text-anchor="middle" fill="#999">Casamento 1</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="300" fill="#f5f5f5"/>
+                                <text x="200" y="150" font-family="Arial" font-size="20" text-anchor="middle" fill="#999">Aniversário</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="300" fill="#f5f5f5"/>
+                                <text x="200" y="150" font-family="Arial" font-size="20" text-anchor="middle" fill="#999">Evento Corporativo</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="300" fill="#f5f5f5"/>
+                                <text x="200" y="150" font-family="Arial" font-size="20" text-anchor="middle" fill="#999">Festa de 15 Anos</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="300" fill="#f5f5f5"/>
+                                <text x="200" y="150" font-family="Arial" font-size="20" text-anchor="middle" fill="#999">Casamento 2</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="eventos" class="events">
+        <div class="container">
+            <h2>Tipos de Eventos</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-icon">
+                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25" r="20" fill="#f8f3ff" />
+                            <path d="M30,15 C35,20 35,30 30,35 M20,15 C15,20 15,30 20,35 M25,12 L25,38" stroke="#8E2DE2" stroke-width="2" fill="none" />
+                        </svg>
+                    </div>
+                    <h3>Casamentos</h3>
+                    <p>Tornamos o dia mais especial da sua vida ainda mais memorável com cardápios exclusivos e serviço impecável.</p>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">
+                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25" r="20" fill="#f8f3ff" />
+                            <path d="M25,15 L25,35 M15,25 L35,25" stroke="#8E2DE2" stroke-width="2" fill="none" />
+                            <circle cx="25" cy="25" r="5" fill="#4A00E0" />
+                        </svg>
+                    </div>
+                    <h3>Aniversários</h3>
+                    <p>Comemore seu aniversário com estilo. Oferecemos opções para todas as idades e gostos.</p>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">
+                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25" r="20" fill="#f8f3ff" />
+                            <rect x="17" y="17" width="16" height="16" fill="#4A00E0" />
+                            <rect x="15" y="15" width="16" height="16" fill="#8E2DE2" stroke="white" />
+                        </svg>
+                    </div>
+                    <h3>Corporativos</h3>
+                    <p>Eventos empresariais com cardápios executivos, coffee breaks e coquetéis para impressionar seus clientes e colaboradores.</p>
+                </div>
+                <div class="event-card">
+                    <div class="event-icon">
+                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25" r="20" fill="#f8f3ff" />
+                            <path d="M15,25 Q25,15 35,25 Q25,35 15,25" fill="#8E2DE2" />
+                        </svg>
+                    </div>
+                    <h3>Festas de 15 Anos</h3>
+                    <p>Celebre essa data importante com um buffet exclusivo que combina elegância e diversão.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="form-contato">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo-evento">Tipo de Evento</label>
+                            <select id="tipo-evento" name="tipo-evento" required>
+                                <option value="">Selecione...</option>
+                                <option value="casamento">Casamento</option>
+                                <option value="aniversario">Aniversário</option>
+                                <option value="corporativo">Corporativo</option>
+                                <option value="15-anos">Festa de 15 Anos</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="data-evento">Data do Evento</label>
+                            <input type="date" id="data-evento" name="data-evento" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20,4H4C2.9,4,2.01,4.9,2.01,6L2,18c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,8l-8,5L4,8V6l8,5l8-5V8z" fill="#8E2DE2"/>
+                            </svg>
+                        </div>
+                        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6b0804051f0a1f042b0a0604190a091e0d0d0e1f45080406450919">[email&#160;protected]</a></p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.01,15.38c-1.23,0-2.42-0.2-3.53-0.56c-0.35-0.12-0.74-0.03-1.01,0.24l-1.57,1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c0.27-0.28,0.35-0.67,0.24-1.02c-0.37-1.11-0.56-2.3-0.56-3.53c0-0.54-0.45-0.99-0.99-0.99H4.19C3.65,3,3,3.24,3,3.99C3,13.28,10.73,21,20.01,21c0.71,0,0.99-0.63,0.99-1.18v-3.45C21,15.83,20.55,15.38,20.01,15.38z" fill="#8E2DE2"/>
+                            </svg>
+                        </div>
+                        <p>(11) 95555-1234</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12,2C8.13,2,5,5.13,5,9c0,5.25,7,13,7,13s7-7.75,7-13C19,5.13,15.87,2,12,2z M12,11.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5S13.38,11.5,12,11.5z" fill="#8E2DE2"/>
+                            </svg>
+                        </div>
+                        <p>Av. Paulista, 1000 - São Paulo, SP</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12,2.2c3.2,0,3.6,0,4.9,0.1c1.2,0.1,1.8,0.2,2.2,0.4c0.6,0.2,1,0.5,1.4,0.9c0.4,0.4,0.7,0.8,0.9,1.4c0.2,0.4,0.4,1.1,0.4,2.2c0.1,1.3,0.1,1.6,0.1,4.8s0,3.6-0.1,4.9c-0.1,1.2-0.2,1.8-0.4,2.2c-0.2,0.6-0.5,1-0.9,1.4c-0.4,0.4-0.8,0.7-1.4,0.9c-0.4,0.2-1.1,0.4-2.2,0.4c-1.3,0.1-1.6,0.1-4.9,0.1s-3.6,0-4.9-0.1c-1.2-0.1-1.8-0.2-2.2-0.4c-0.6-0.2-1-0.5-1.4-0.9c-0.4-0.4-0.7-0.8-0.9-1.4c-0.2-0.4-0.4-1.1-0.4-2.2c-0.1-1.3-0.1-1.6-0.1-4.9s0-3.6,0.1-4.9c0.1-1.2,0.2-1.8,0.4-2.2c0.2-0.6,0.5-1,0.9-1.4c0.4-0.4,0.8-0.7,1.4-0.9c0.4-0.2,1.1-0.4,2.2-0.4C8.4,2.2,8.7,2.2,12,2.2M12,0C8.7,0,8.3,0,7.1,0.1c-1.3,0.1-2.2,0.3-2.9,0.6C3.4,1,2.7,1.4,2,2.1C1.3,2.8,0.9,3.5,0.6,4.3C0.3,5,0.1,5.9,0.1,7.1C0,8.3,0,8.7,0,12s0,3.7,0.1,4.9c0.1,1.3,0.3,2.2,0.6,2.9C1,20.6,1.4,21.3,2.1,22c0.7,0.7,1.4,1.1,2.2,1.4c0.7,0.3,1.6,0.5,2.9,0.6C8.3,24,8.7,24,12,24s3.7,0,4.9-0.1c1.3-0.1,2.2-0.3,2.9-0.6c0.8-0.3,1.5-0.7,2.2-1.4c0.7-0.7,1.1-1.4,1.4-2.2c0.3-0.7,0.5-1.6,0.6-2.9C24,15.7,24,15.3,24,12s0-3.7-0.1-4.9c-0.1-1.3-0.3-2.2-0.6-2.9C23,3.4,22.6,2.7,21.9,2c-0.7-0.7-1.4-1.1-2.2-1.4C19,0.3,18.1,0.1,16.9,0.1C15.7,0,15.3,0,12,0z" fill="#8E2DE2"/>
+                                <path d="M12,5.8c-3.4,0-6.2,2.8-6.2,6.2s2.8,6.2,6.2,6.2s6.2-2.8,6.2-6.2S15.4,5.8,12,5.8z M12,16c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S14.2,16,12,16z" fill="#8E2DE2"/>
+                                <circle cx="18.4" cy="5.6" r="1.4" fill="#8E2DE2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22,12.1c0-5.6-4.5-10.1-10.1-10.1S1.9,6.5,1.9,12.1c0,5,3.7,9.2,8.6,9.9v-7h-2.6v-2.9h2.6V9.9c0-2.6,1.5-4,3.9-4c1.1,0,2.3,0.2,2.3,0.2v2.5h-1.3c-1.3,0-1.7,0.8-1.7,1.6v1.9h2.9l-0.5,2.9h-2.4v7c4.9-0.7,8.6-4.9,8.6-9.9z" fill="#8E2DE2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23,5.1C22.2,5.5,21.4,5.7,20.5,5.8c0.9-0.5,1.6-1.4,1.9-2.4c-0.8,0.5-1.8,0.9-2.7,1.1c-0.8-0.8-1.9-1.3-3.1-1.3c-2.3,0-4.2,1.9-4.2,4.2c0,0.3,0,0.6,0.1,0.9C8.5,8.1,5.4,6.4,3.3,3.9C2.9,4.5,2.7,5.2,2.7,6c0,1.5,0.7,2.8,1.9,3.5c-0.7,0-1.3-0.2-1.9-0.5c0,0,0,0,0,0.1c0,2,1.4,3.7,3.3,4.1c-0.3,0.1-0.7,0.1-1.1,0.1c-0.3,0-0.5,0-0.8-0.1c0.5,1.7,2.1,2.9,3.9,2.9c-1.4,1.1-3.2,1.8-5.2,1.8c-0.3,0-0.7,0-1-0.1C3.9,19.1,6.2,20,8.7,20c8.3,0,12.8-6.9,12.8-12.8c0-0.2,0-0.4,0-0.6C22.2,6.7,22.7,5.9,23,5.1z" fill="#8E2DE2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2023 Amora Buffet. Todos os direitos reservados.</p>
-                <div class="social-links">
-                    <a href="#" class="social-icon">Instagram</a>
-                    <a href="#" class="social-icon">Facebook</a>
-                    <a href="#" class="social-icon">WhatsApp</a>
+                <div class="footer-logo">
+                    <svg class="logo" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30,10 C45,10 55,20 55,35 C55,50 45,60 30,60 C15,60 5,50 5,35 C5,20 15,10 30,10" fill="#8E2DE2"/>
+                        <path d="M30,15 C40,15 50,25 50,35 C50,45 40,55 30,55 C20,55 10,45 10,35 C10,25 20,15 30,15" fill="#4A00E0"/>
+                        <text x="70" y="40" font-family="'Pacifico', cursive" font-size="24" fill="#fff">Amora</text>
+                        <text x="70" y="55" font-family="'Arial', sans-serif" font-size="12" fill="#ddd">Buffet</text>
+                    </svg>
                 </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Serviços</h4>
+                        <ul>
+                            <li><a href="#cardapios">Cardápios</a></li>
+                            <li><a href="#eventos">Eventos</a></li>
+                            <li><a href="#contato">Orçamentos</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Sobre</h4>
+                        <ul>
+                            <li><a href="#sobre">Nossa História</a></li>
+                            <li><a href="#galeria">Galeria</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Amora Buffet. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
-    
-    <script type="module" src="app.js"></script>
-</body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 </html>
