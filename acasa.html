@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amora Buffet | Sobre Nós</title>
+    <meta name="description" content="Conheça a história do Amora Buffet, nossa missão, valores e paixão pela gastronomia.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+        .galeria {
+            margin-top: 50px;
+        }
+        .galeria h3 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .carousel {
+            width: 80%;
+            margin: auto;
+        }
+        .carousel a {
+            display: block;
+        }
+        .carousel img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>Amora</h1>
+                    <span>Buffet & Eventos</span>
+                </div>
+                <ul>
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#cardapios">Cardápios</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="galeria container">
+            <h3>A Casa de Babette</h3>
+            <div class="carousel">
+                <a href="Babete/A casa_files/acasa.jpg" data-lightbox="galeria" data-title="Foto do espaço Amora Buffet">
+                    <img src="Babete/A casa_files/acasa.jpg" alt="Foto do espaço Amora Buffet">
+                </a>
+                <a href="Babete/A casa_files/casamento1.jpg" data-lightbox="galeria" data-title="Foto do salão decorado">
+                    <img src="Babete/A casa_files/casamento1.jpg" alt="Foto do salão decorado">
+                </a>
+                <a href="Babete/A casa_files/468842724_18250123936286129_9178579212732858869_n.jpg" data-lightbox="galeria" data-title="Foto da área externa">
+                    <img src="Babete/A casa_files/468842724_18250123936286129_9178579212732858869_n.jpg" alt="Foto da área externa">
+                </a>
+                <a href="Babete/A casa_files/471647947_941649734586190_8537563756010924988_n.jpg" data-lightbox="galeria" data-title="Detalhes da mesa posta">
+                    <img src="Babete/A casa_files/471647947_941649734586190_8537563756010924988_n.jpg" alt="Detalhes da mesa posta">
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Amora Buffet. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+            });
+        });
+    </script>
+</body>
+</html>
